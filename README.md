@@ -1,24 +1,17 @@
-# README
+# Data model planning
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Posts table
+- id:integer
+- created_at:datetime
+- updated_at:datetime
+- title:string [present, unique, 4-50 chars]
+- body:text [present]
+- has_many comments
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Comments table
+- id:integer
+- created_at:datetime
+- updated_at:datetime
+- body:text [present]
+- post_id:integer [present]
+- belongs_to post
