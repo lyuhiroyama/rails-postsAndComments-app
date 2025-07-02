@@ -23,10 +23,10 @@ Users table
 - id:integer
 - created_at:datetime
 - updated_at:datetime
-- username:string
-- email:string
-- country:string
-- prefecture:string
-- age:integer
+- username:string [present, unique, 3-20 chars]
+- email:string [present, unique]
+- country:string [present]
+- prefecture:string [present]
+- age:integer [present, integer only]
 - has_many posts
 - has_many comments
