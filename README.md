@@ -24,9 +24,9 @@ Users table
 - created_at:datetime
 - updated_at:datetime
 - username:string [present, unique, 3-20 chars]
-- email:string [present, unique]
-- country:string [present]
-- prefecture:string [present]
-- age:integer [present, integer only]
+- email:string [present, unique, max 50 chars]
+- country:string [present, max 50 chars]
+- prefecture:string [present, max 50 chars]
+- age:integer [present, integer only, 1-119]
 - has_many posts
 - has_many comments
