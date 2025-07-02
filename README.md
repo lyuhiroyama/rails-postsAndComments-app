@@ -15,6 +15,7 @@ Comments table
 - updated_at:datetime
 - body:text [present]
 - post_id:integer [present]
+- user_id:integer [present]
 - belongs_to post
 - belongs_to user
 
